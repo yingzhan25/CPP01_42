@@ -6,7 +6,7 @@
 /*   By: yingzhan <yingzhan@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 11:31:57 by yingzhan          #+#    #+#             */
-/*   Updated: 2025/11/05 11:47:04 by yingzhan         ###   ########.fr       */
+/*   Updated: 2025/11/06 13:06:42 by yingzhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,15 @@
 
 int	main(void)
 {
-	Zombie	newZombie;
+	Zombie	stackZombie("foo");
 
-	newZombie.newZombie("foo");
-	newZombie.randomChump("foo");
+	stackZombie.announce();
+	Zombie*	heapZombie = newZombie("foo2");
+	heapZombie->announce();
+	//destroy foo1
+	randomChump("foo1");
+	//destroy foo2
+	delete heapZombie;
+	//destroy foo
 	return (0);
 }

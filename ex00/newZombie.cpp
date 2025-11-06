@@ -6,14 +6,14 @@
 /*   By: yingzhan <yingzhan@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 11:20:38 by yingzhan          #+#    #+#             */
-/*   Updated: 2025/11/05 11:28:29 by yingzhan         ###   ########.fr       */
+/*   Updated: 2025/11/06 13:03:42 by yingzhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie*	Zombie::newZombie(std::string name)
+Zombie*	newZombie(std::string name)
 {
-	_name = name;
-	return (this);
+	Zombie *ptr = new Zombie(name);
+	return (ptr);
 }
