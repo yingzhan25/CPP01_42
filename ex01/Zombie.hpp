@@ -6,7 +6,7 @@
 /*   By: yingzhan <yingzhan@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 11:00:16 by yingzhan          #+#    #+#             */
-/*   Updated: 2025/11/06 13:17:56 by yingzhan         ###   ########.fr       */
+/*   Updated: 2025/11/06 15:52:21 by yingzhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ class Zombie
 	private:
 		std::string	_name;
 	public:
-		Zombie(std::string name);
+		Zombie();
 		~Zombie();
 		void	announce(void);
+		void	setName(std::string name);
 };
 
-Zombie*	newZombie(std::string name);
-void	randomChump(std::string name);
+Zombie*	zombieHorde(int N, std::string name);
 
 #endif

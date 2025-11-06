@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yingzhan <yingzhan@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 11:00:16 by yingzhan          #+#    #+#             */
-/*   Updated: 2025/11/06 13:17:56 by yingzhan         ###   ########.fr       */
+/*   Created: 2025/11/06 14:34:32 by yingzhan          #+#    #+#             */
+/*   Updated: 2025/11/06 15:36:01 by yingzhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
-#include <string>
+#include "Zombie.hpp"
+#include <iostream>
 
-class Zombie
+Zombie*	zombieHorde(int N, std::string name)
 {
-	private:
-		std::string	_name;
-	public:
-		Zombie(std::string name);
-		~Zombie();
-		void	announce(void);
-};
-
-Zombie*	newZombie(std::string name);
-void	randomChump(std::string name);
-
-#endif
+	if (N <= 0)
+	{
+		std::cout << "Number of zombie should be positive." << std::endl;
+		return (NULL);
+	}
+	Zombie* horde = new Zombie[N];
+	for (int i = 0; i < N; i++)
+		horde[i].setName(name);
+	return (horde);
+}
