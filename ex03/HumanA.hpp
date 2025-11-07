@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yingzhan <yingzhan@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 16:57:41 by yingzhan          #+#    #+#             */
-/*   Updated: 2025/11/07 12:51:34 by yingzhan         ###   ########.fr       */
+/*   Created: 2025/11/07 10:56:49 by yingzhan          #+#    #+#             */
+/*   Updated: 2025/11/07 11:49:46 by yingzhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 #include "Weapon.hpp"
+#include <string>
 
-Weapon::Weapon() : _type("No weapon") {}
-
-Weapon::Weapon(std::string type) : _type(type) {}
-
-const std::string&	Weapon::getType()const
+class HumanA
 {
-	return (_type);
-}
+	private:
+		Weapon&	_weapon;
+		std::string	_name;
+	public:
+		HumanA(std::string humanName, Weapon& weaponName);
+		void	attack()const;
+};
 
-void	Weapon::setType(std::string type)
-{
-	_type = type;
-}
+#endif

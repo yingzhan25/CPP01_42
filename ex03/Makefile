@@ -6,7 +6,7 @@
 #    By: yingzhan <yingzhan@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/05 10:49:18 by yingzhan          #+#    #+#              #
-#    Updated: 2025/11/06 16:21:49 by yingzhan         ###   ########.fr        #
+#    Updated: 2025/11/07 12:52:44 by yingzhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = human
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-SRC = main.cpp
+SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
